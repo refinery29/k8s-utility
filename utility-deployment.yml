@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utility-deployment
+spec:
+  selector:
+    matchLabels:
+      app: utilitypod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: utilitypod
+    spec:
+      containers:
+      - name: utility
+        image: utility:v1.0
