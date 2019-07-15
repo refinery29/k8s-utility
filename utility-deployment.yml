@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: utility-deployment
+  name: utility
 spec:
   selector:
     matchLabels:
-      app: utilitypod
+      app: utility
   replicas: 1
   template:
     metadata:
       labels:
-        app: utilitypod
+        app: utility
     spec:
       containers:
       - name: utility
-        image: utility:v1.0
+        image: 327361568963.dkr.ecr.us-east-1.amazonaws.com/k8s-utility:e2bb704-1562020086
